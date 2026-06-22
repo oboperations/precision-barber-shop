@@ -6,7 +6,7 @@
   <title>Precision Barber Shop — Jacksonville, FL</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,13 +64,34 @@
     }
 
     .nav-logo {
-      font-family: var(--font-head);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1px;
+      line-height: 1;
       color: var(--black);
       text-decoration: none;
+    }
+
+    .logo-main {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .logo-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--black);
+      opacity: 0.65;
+      line-height: 1;
     }
 
     .nav-links {
@@ -1107,7 +1128,8 @@
     @media (max-width: 480px) {
       /* Nav */
       nav { height: 60px; }
-      .nav-logo { font-size: 13px; }
+      .logo-main { font-size: 22px; }
+      .logo-sub { font-size: 9px; }
       .nav-cta { font-size: 11px; padding: 8px 16px; }
 
       /* Hero */
@@ -1183,7 +1205,10 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#hero" class="nav-logo">Precision</a>
+    <a href="#hero" class="nav-logo">
+      <span class="logo-main">Precision</span>
+      <span class="logo-sub">· Barber Shop ·</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
